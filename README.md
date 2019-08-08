@@ -11,7 +11,8 @@ Objective: get yourself a hardened Centos OS
 
  ### 2_berks:
   - Approach:: Add the Berksfile and everything now works.  
-  - This is setup for now., but need to make it break to introduct polictyfiles  
+  Status: Currently converges the hardening cookbook
+  To Do: Add something that breaks berks, but works on policyfiles
 ```
 Contents:
 - 2 recipes and 1 auditd.conf file needed within the remediation.
@@ -23,4 +24,4 @@ Contents:
 
 ### 3_policyfiles:
   - Approach: Fix the above
-  - ** Still need to get this to converge with the initial setup.
+  Status: Converges the same as berks. (Hardening cookbook)
