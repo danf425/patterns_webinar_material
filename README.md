@@ -1,19 +1,18 @@
-```
-Simple idea: Highlight policyfiles and end on the path toward more modern patterns (effortless). Instead of telling the audience why something is better and why we are opinonated about x,y, and z. Actually go through the pain in real-time.
+Simple idea: Highlight policyfiles and end on the path toward more modern patterns (effortless). Instead of telling the audience why something is better and why we are opinonated about x,y, and z. Actually go through the pain in real-time.  
+  
+- Start with basic knife, pre-berkshelf (Notes: I hope no-one is doing this anymore, but it’s good to go over why we start making upgrades to our processes. Also don’t spend more than 3 minutes on this)   
+- Fix knife problems with berkshelf (dependency solving and having kitchen run local tests to enable TDD)… Add some extra cookbooks w/ attributes and start making the job difficult for Berks.  
+- Maybe talk about role cookbooks, but even if someone is using role cookbooks, they are still relying on berks for the deps-solv.  
+- Introduce policyfiles to handle more elaborate run-lists, attributes, and dep-solver on build rather than run time.  
+	- I’ll probably run all tests locally, but once a proper policy lock file is generated, I want to run it through a proper pipeline. Therefore, guaranteeing the exact same thing that happens in local can happen in prod. (Immutable artifact)  
+  
+- Finish highlighting the potential of effortless where:  
+	- the chef server can be let go, and boot strapping becomes a thing of the past. (Streamlining the process so that a single pipeline can be used for all changes)  
+	- Contract between infra -vs- apps are obvious  
+	- etc.  
 
-- Start with basic knife, pre-berkshelf (Notes: I hope no-one is doing this anymore, but it’s good to go over why we start making upgrades to our processes. Also don’t spend more than 3 minutes on this) 
-- Fix knife problems with berkshelf (dependency solving and having kitchen run local tests to enable TDD)… Add some extra cookbooks w/ attributes and start making the job difficult for Berks.
-- Maybe talk about role cookbooks, but even if someone is using role cookbooks, they are still relying on berks for the deps-solv.
-- Introduce policyfiles to handle more elaborate run-lists, attributes, and dep-solver on build rather than run time.
-	- I’ll probably run all tests locally, but once a proper policy lock file is generated, I want to run it through a proper pipeline. Therefore, guaranteeing the exact same thing that happens in local can happen in prod. (Immutable artifact)
-
-- Finish highlighting the potential of effortless where:
-	- the chef server can be let go, and boot strapping becomes a thing of the past. (Streamlining the process so that a single pipeline can be used for all changes)
-	- Contract between infra -vs- apps are obvious
-	- etc.
-```
-
-
+  
+  
 # Different Patterns
 
 Objective: get yourself a hardened Centos OS (Maybe do other stuff)
