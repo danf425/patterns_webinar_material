@@ -8,6 +8,15 @@ Objective: get yourself a hardened Centos OS
  - Approach:: Do everything manual. download stuff from supermarket because theres no dependency solving  
  - Still need this to converge... never used kitchen without Berkshelf...  
 
+By default hardening will fail because os-hardening can't be found.
+0. kitchen converge (this will fail because it has dependencies)
+1. "Install" `os-hardening` from the supermarket:  
+     - Go to cookbooks directory: `cd ..`  
+     -`knife supermarket download os-hardening -o .`  
+     -`tar xvzf os-hardening.tar.gz`
+     - Then you would have to do a `knife cookbook upload` and upload it to your server. But at the point you are not even TDDing (This will not run with kitchen so let's bypass this)
+
+
 
  ### 2_berks:
   - Approach:: Add the Berksfile and everything now works.    
@@ -37,3 +46,9 @@ Contents:
       - 1 change: added path to hardening cookbook
 
 
+PolicyFiles Instructions:  
+- Add attributes:   
+```
+# Override attributes           
+default['hardening'] = { }
+```
