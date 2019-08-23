@@ -1,7 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2222'
-username: vagrant
-ssh_key: "/Users/dmontanez/Projects/webinar_material/3_policyfiles/.kitchen/kitchen-vagrant/default-centos-7/.vagrant/machines/default/virtualbox/private_key"
-last_action: converge
-last_error: 

@@ -33,4 +33,7 @@ suites:
     verifier:
       inspec_tests:
         - test/integration/default
+    #    - name: dev-sec/linux-baseline      
+    #  controls:
+    #    - package-08
     attributes:
